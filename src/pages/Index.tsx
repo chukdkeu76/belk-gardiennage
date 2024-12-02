@@ -7,8 +7,13 @@ import { ValuesSection } from "@/components/ValuesSection";
 import { PartnersSection } from "@/components/PartnersSection";
 import { ContactSection } from "@/components/ContactSection";
 import { AboutSection } from "@/components/AboutSection";
+import { useEffect } from "react";
 
 const Index = () => {
+  useEffect(() => {
+    console.log("Index page mounted");
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
