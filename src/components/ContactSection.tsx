@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { ContactForm } from "./ContactForm";
 
 export function ContactSection() {
   return (
@@ -21,14 +22,17 @@ export function ContactSection() {
               <span>Siège Social/Résidence El Kaoutar 5 Mag N°4 Bir Rami, Kénitra</span>
             </p>
           </div>
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="bg-primary/20 hover:bg-primary/30 border-primary"
-            onClick={() => window.location.href = 'mailto:belkgardiennage@gmail.com'}
-          >
-            Envoyez un message
-          </Button>
+          <ContactForm 
+            trigger={
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="bg-primary/20 hover:bg-primary/30 border-primary"
+              >
+                Envoyez un message
+              </Button>
+            }
+          />
         </div>
       </div>
     </section>

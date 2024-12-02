@@ -1,10 +1,8 @@
 import { Button } from "./ui/button";
+import { ContactForm } from "./ContactForm";
+import { QuoteForm } from "./QuoteForm";
 
 export function HeroSection() {
-  const handleContact = () => {
-    window.location.href = 'mailto:belkgardiennage@gmail.com';
-  };
-
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <video
@@ -27,14 +25,20 @@ export function HeroSection() {
         <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
           Votre Partenaire de Confiance en Sécurité
         </p>
-        <Button 
-          size="lg" 
-          variant="outline" 
-          className="bg-primary/20 hover:bg-primary/30 border-primary"
-          onClick={handleContact}
-        >
-          Contactez-nous
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <ContactForm 
+            trigger={
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="bg-primary/20 hover:bg-primary/30 border-primary"
+              >
+                Contactez-nous
+              </Button>
+            }
+          />
+          <QuoteForm />
+        </div>
       </div>
     </section>
   );
