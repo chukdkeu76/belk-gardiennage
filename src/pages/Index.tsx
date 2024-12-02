@@ -7,11 +7,19 @@ import { PartnersSection } from "@/components/PartnersSection";
 import { ContactSection } from "@/components/ContactSection";
 import { AboutSection } from "@/components/AboutSection";
 import { useEffect } from "react";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 
 const Index = () => {
   useEffect(() => {
     console.log("Index page mounted");
   }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -21,6 +29,56 @@ const Index = () => {
           <div className="flex items-center gap-2">
             <img src="/lovable-uploads/09609e9c-29aa-4911-9fc5-acaaa7de68c6.png" alt="BELK Gardiennage" className="h-12" />
           </div>
+          
+          <NavigationMenu className="hidden md:flex">
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger 
+                  onClick={() => scrollToSection('services')}
+                  className="bg-transparent hover:bg-primary/10"
+                >
+                  Services
+                </NavigationMenuTrigger>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <NavigationMenuTrigger 
+                  onClick={() => scrollToSection('values')}
+                  className="bg-transparent hover:bg-primary/10"
+                >
+                  Nos Valeurs
+                </NavigationMenuTrigger>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <NavigationMenuTrigger 
+                  onClick={() => scrollToSection('partners')}
+                  className="bg-transparent hover:bg-primary/10"
+                >
+                  Partenaires
+                </NavigationMenuTrigger>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <NavigationMenuTrigger 
+                  onClick={() => scrollToSection('about')}
+                  className="bg-transparent hover:bg-primary/10"
+                >
+                  À Propos
+                </NavigationMenuTrigger>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <NavigationMenuTrigger 
+                  onClick={() => scrollToSection('contact')}
+                  className="bg-transparent hover:bg-primary/10"
+                >
+                  Contact
+                </NavigationMenuTrigger>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
           <div className="flex items-center gap-4">
             <ThemeToggle />
           </div>
@@ -29,11 +87,21 @@ const Index = () => {
 
       <main>
         <HeroSection />
-        <ServicesSection />
-        <ValuesSection />
-        <PartnersSection />
-        <AboutSection />
-        <ContactSection />
+        <div id="services">
+          <ServicesSection />
+        </div>
+        <div id="values">
+          <ValuesSection />
+        </div>
+        <div id="partners">
+          <PartnersSection />
+        </div>
+        <div id="about">
+          <AboutSection />
+        </div>
+        <div id="contact">
+          <ContactSection />
+        </div>
       </main>
     </div>
   );
