@@ -14,7 +14,7 @@ interface MobileNavProps {
 export function MobileNav({ scrollToSection }: MobileNavProps) {
   return (
     <Sidebar>
-      <SidebarTrigger asChild>
+      <SidebarTrigger>
         <Button variant="ghost" size="icon" className="md:hidden">
           <Menu className="h-6 w-6" />
         </Button>
