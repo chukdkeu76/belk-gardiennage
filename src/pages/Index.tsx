@@ -27,7 +27,11 @@ const Index = () => {
       <header className="fixed w-full bg-background/80 backdrop-blur-sm border-b z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <img src="/lovable-uploads/09609e9c-29aa-4911-9fc5-acaaa7de68c6.png" alt="BELK Gardiennage" className="h-12" />
+            <img 
+              src="/lovable-uploads/6b7d37de-f269-4468-ba2e-6657f3a187ce.png" 
+              alt="BELK Gardiennage" 
+              className="h-12 w-auto"
+            />
           </div>
           
           <NavigationMenu className="hidden md:flex">
