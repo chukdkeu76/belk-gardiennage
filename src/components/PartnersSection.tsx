@@ -1,35 +1,35 @@
 const partners = [
   { 
     name: "LFP France", 
-    image: "https://upload.wikimedia.org/wikipedia/fr/thumb/1/14/Ligue_de_Football_Professionnel_%28logo%29.svg/1200px-Ligue_de_Football_Professionnel_%28logo%29.svg.png" 
+    image: "/placeholder.svg"
   },
   { 
     name: "Euro 2016", 
-    image: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/UEFA_Euro_2016_Logo.svg/1200px-UEFA_Euro_2016_Logo.svg.png" 
+    image: "/placeholder.svg"
   },
   { 
     name: "IRB Rugby World Cup", 
-    image: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Rugby_World_Cup.svg/1200px-Rugby_World_Cup.svg.png" 
+    image: "/placeholder.svg"
   },
   { 
     name: "Assistance Publique Hôpitaux de Marseille", 
-    image: "https://upload.wikimedia.org/wikipedia/fr/thumb/f/f7/Logo_AP-HM.svg/1200px-Logo_AP-HM.svg.png" 
+    image: "/placeholder.svg"
   },
   { 
     name: "Festival de Cannes", 
-    image: "https://upload.wikimedia.org/wikipedia/fr/thumb/7/79/Festival_de_Cannes_Logo.svg/1200px-Festival_de_Cannes_Logo.svg.png" 
+    image: "/placeholder.svg"
   },
   { 
     name: "Super U", 
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Logo_Super_U_2009.svg/2560px-Logo_Super_U_2009.svg.png" 
+    image: "/placeholder.svg"
   },
   { 
     name: "New Yorker", 
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/New_Yorker.svg/2560px-New_Yorker.svg.png" 
+    image: "/placeholder.svg"
   },
   { 
     name: "Auchan", 
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Logo_Auchan.svg/2560px-Logo_Auchan.svg.png" 
+    image: "/placeholder.svg"
   },
   { 
     name: "Formula One", 
@@ -41,7 +41,7 @@ const partners = [
   },
   { 
     name: "Carrefour", 
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Carrefour_logo.svg/2560px-Carrefour_logo.svg.png" 
+    image: "/placeholder.svg"
   },
   { 
     name: "IKEA", 
