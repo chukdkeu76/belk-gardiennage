@@ -6,14 +6,17 @@ import { ValuesSection } from "@/components/ValuesSection";
 import { PartnersSection } from "@/components/PartnersSection";
 import { ContactSection } from "@/components/ContactSection";
 import { AboutSection } from "@/components/AboutSection";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { JobApplicationForm } from "@/components/JobApplicationForm";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 const Index = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     console.log("Index page mounted");
-    // Set dark mode as default
     document.documentElement.classList.add('dark');
   }, []);
 
@@ -22,7 +25,50 @@ const Index = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMobileMenuOpen(false);
   };
+
+  const NavLinks = () => (
+    <>
+      <div className="flex flex-col lg:flex-row gap-4">
+        <Button 
+          variant="ghost" 
+          onClick={() => scrollToSection('services')}
+          className="w-full text-left justify-start lg:justify-center"
+        >
+          Services
+        </Button>
+        <Button 
+          variant="ghost" 
+          onClick={() => scrollToSection('values')}
+          className="w-full text-left justify-start lg:justify-center"
+        >
+          Nos Valeurs
+        </Button>
+        <Button 
+          variant="ghost" 
+          onClick={() => scrollToSection('partners')}
+          className="w-full text-left justify-start lg:justify-center"
+        >
+          Partenaires
+        </Button>
+        <Button 
+          variant="ghost" 
+          onClick={() => scrollToSection('about')}
+          className="w-full text-left justify-start lg:justify-center"
+        >
+          À Propos
+        </Button>
+        <Button 
+          variant="ghost" 
+          onClick={() => scrollToSection('contact')}
+          className="w-full text-left justify-start lg:justify-center"
+        >
+          Contact
+        </Button>
+      </div>
+    </>
+  );
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -37,54 +83,10 @@ const Index = () => {
             />
           </div>
           
-          <NavigationMenu className="hidden lg:flex">
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger 
-                  onClick={() => scrollToSection('services')}
-                  className="bg-transparent hover:bg-primary/10"
-                >
-                  Services
-                </NavigationMenuTrigger>
-              </NavigationMenuItem>
-              
-              <NavigationMenuItem>
-                <NavigationMenuTrigger 
-                  onClick={() => scrollToSection('values')}
-                  className="bg-transparent hover:bg-primary/10"
-                >
-                  Nos Valeurs
-                </NavigationMenuTrigger>
-              </NavigationMenuItem>
-              
-              <NavigationMenuItem>
-                <NavigationMenuTrigger 
-                  onClick={() => scrollToSection('partners')}
-                  className="bg-transparent hover:bg-primary/10"
-                >
-                  Partenaires
-                </NavigationMenuTrigger>
-              </NavigationMenuItem>
-              
-              <NavigationMenuItem>
-                <NavigationMenuTrigger 
-                  onClick={() => scrollToSection('about')}
-                  className="bg-transparent hover:bg-primary/10"
-                >
-                  À Propos
-                </NavigationMenuTrigger>
-              </NavigationMenuItem>
-              
-              <NavigationMenuItem>
-                <NavigationMenuTrigger 
-                  onClick={() => scrollToSection('contact')}
-                  className="bg-transparent hover:bg-primary/10"
-                >
-                  Contact
-                </NavigationMenuTrigger>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-4">
+            <NavLinks />
+          </div>
 
           <div className="flex items-center gap-4">
             <JobApplicationForm 
@@ -97,6 +99,31 @@ const Index = () => {
                 </Button>
               }
             />
+            
+            {/* Mobile Menu Button */}
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="lg:hidden">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <nav className="flex flex-col gap-4 mt-8">
+                  <NavLinks />
+                  <JobApplicationForm 
+                    trigger={
+                      <Button 
+                        variant="outline"
+                        className="w-full md:hidden bg-primary/20 hover:bg-primary/30 border-primary"
+                      >
+                        Postuler Pour "Agent Sécurité Belk"
+                      </Button>
+                    }
+                  />
+                </nav>
+              </SheetContent>
+            </Sheet>
+            
             <ThemeToggle />
           </div>
         </div>
