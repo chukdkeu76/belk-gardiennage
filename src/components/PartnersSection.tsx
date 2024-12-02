@@ -1,27 +1,27 @@
 const partners = [
   { 
     name: "LFP France", 
-    image: "/placeholder.svg"
+    image: "/lovable-uploads/1e2e5694-62b9-4677-afec-82a962cd1e41.png"
   },
   { 
     name: "Euro 2016", 
-    image: "/placeholder.svg"
+    image: "/lovable-uploads/453154d5-65ad-4442-9092-2db0fb6d3db6.png"
   },
   { 
     name: "IRB Rugby World Cup", 
-    image: "/placeholder.svg"
+    image: "/lovable-uploads/bf476ba8-a179-496a-88f9-9942a8477603.png"
   },
   { 
     name: "Assistance Publique Hôpitaux de Marseille", 
-    image: "/placeholder.svg"
+    image: "/lovable-uploads/1e4f96b7-1269-4fe4-9ad2-8f03a0930e5b.png"
   },
   { 
     name: "Festival de Cannes", 
-    image: "/placeholder.svg"
+    image: "/lovable-uploads/af10c8d8-5c39-4d69-afd4-9012eeacb56b.png"
   },
   { 
     name: "Super U", 
-    image: "/placeholder.svg"
+    image: "/lovable-uploads/1e2e5694-62b9-4677-afec-82a962cd1e41.png"
   },
   { 
     name: "New Yorker", 
