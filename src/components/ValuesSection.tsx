@@ -1,17 +1,21 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Ear, Heart, Sparkles } from "lucide-react";
 
 const values = [
   {
     title: "Écoute",
-    description: "Proximité et attention aux besoins de nos clients"
+    description: "Proximité et attention aux besoins de nos clients",
+    icon: Ear
   },
   {
     title: "Respect",
-    description: "Le fondement de toute relation durable"
+    description: "Le fondement de toute relation durable",
+    icon: Heart
   },
   {
     title: "Audace",
-    description: "Innovation et recherche constante d'excellence"
+    description: "Innovation et recherche constante d'excellence",
+    icon: Sparkles
   }
 ];
 
@@ -24,6 +28,9 @@ export function ValuesSection() {
           {values.map((value, index) => (
             <Card key={index} className="bg-white/10 backdrop-blur border-none text-white">
               <CardHeader>
+                <div className="flex justify-center mb-4">
+                  <value.icon className="w-12 h-12 text-primary" />
+                </div>
                 <CardTitle>{value.title}</CardTitle>
                 <CardContent className="pt-4">
                   <p>{value.description}</p>

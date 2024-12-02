@@ -7,8 +7,8 @@ export function AboutSection() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://images.unsplash.com/photo-1487252665478-49b61b47f302"
-                alt="BELK Gardiennage Team"
+                src="/lovable-uploads/0e406229-70ec-421f-ae86-a6e5684c4843.png"
+                alt="BELK Gardiennage Logo"
                 className="rounded-lg shadow-lg"
               />
             </div>

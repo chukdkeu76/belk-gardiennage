@@ -1,5 +1,4 @@
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { LanguageSelector } from "@/components/LanguageSelector";
 import { Button } from "@/components/ui/button";
 import { HeroSection } from "@/components/HeroSection";
 import { ServicesSection } from "@/components/ServicesSection";
@@ -23,7 +22,6 @@ const Index = () => {
             <img src="/lovable-uploads/09609e9c-29aa-4911-9fc5-acaaa7de68c6.png" alt="BELK Gardiennage" className="h-12" />
           </div>
           <div className="flex items-center gap-4">
-            <LanguageSelector />
             <ThemeToggle />
           </div>
         </div>
