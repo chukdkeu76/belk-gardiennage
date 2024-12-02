@@ -25,11 +25,11 @@ const partners = [
   },
   { 
     name: "New Yorker", 
-    image: "/placeholder.svg"
+    image: "/lovable-uploads/2b03483c-629a-45ae-ba42-c48eeb15f5c5.png"
   },
   { 
     name: "Auchan", 
-    image: "/placeholder.svg"
+    image: "/lovable-uploads/0a5d647e-b650-41ec-831c-8a27ba0001c7.png"
   },
   { 
     name: "Formula One", 
@@ -41,7 +41,7 @@ const partners = [
   },
   { 
     name: "Carrefour", 
-    image: "/placeholder.svg"
+    image: "/lovable-uploads/ce3e3cb3-fc41-4142-a442-fb4072e0cfd7.png"
   },
   { 
     name: "IKEA", 

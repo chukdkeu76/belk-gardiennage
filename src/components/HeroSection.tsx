@@ -11,7 +11,7 @@ export function HeroSection() {
         poster="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
       >
         <source
-          src="https://assets.mixkit.co/videos/preview/mixkit-digital-surveillance-system-2352-large.mp4"
+          src="https://res.cloudinary.com/dkb1opktz/video/upload/v1733156399/fr7vsdiompuvrbpvfcpp.mp4"
           type="video/mp4"
         />
       </video>
